@@ -1,7 +1,6 @@
 name: Add git tag
 
-on:
-  workflow_dispatch:
+on: [ workflow_dispatch ]
 
  jobs:
    create-git-tag:
