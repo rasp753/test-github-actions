@@ -18,5 +18,4 @@ jobs:
           bundler-cache: true
       - run: |
           bundle exec fastlane add_version_tag
-          git push origin $TAG_NAME
     
