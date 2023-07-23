@@ -22,9 +22,13 @@ platform :ios do
       xcodeproj: "TestGithubActions.xcodeproj",
       target: "TestGithubActions"
     )
+
+    tag_name = "v#{version}-#{DateTime.now.strftime("%Y%m%d-%T-%Z")}"
     
     add_git_tag(
-      tag: "v#{version}"
+      tag: tag_name
     )
+
+    ENV["TAG_NAME"] = tag_name
   end
 end
