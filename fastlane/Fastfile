@@ -23,7 +23,9 @@ platform :ios do
       target: "TestGithubActions"
     )
 
-    tag_name = "v#{version}-#{DateTime.now.getlocal("+09:00").strftime("%Y%m%d-%H%M%S-JST")}"
+    now = DateTime.now
+    now = now.getlocal("+09:00")
+    tag_name = "v#{version}-#{now.strftime("%Y%m%d-%H%M%S-JST")}"
     
     add_git_tag(
       tag: tag_name
