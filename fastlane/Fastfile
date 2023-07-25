@@ -32,7 +32,5 @@ platform :ios do
     push_git_tags(
       tag: tag_name
     )
-
-    ENV["TAG_NAME"] = tag_name
   end
 end
